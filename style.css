@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    content:'';
+    background-image:url('./images/bg-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:hsl(228, 56%, 26%);
+}
+main{
+    margin:100px auto;
+}
+.container{
+    background:hsl(228, 56%, 26%);
+    font-size: 20px;
+    color:white;
+    width: 80%;
+    padding: 20px;
+    border-radius:10px 100px 10px 10px;
+    margin:100px auto;
+}
+.icon{
+    margin: 10px;
+    width: 100%;
+}
+.icon img{
+    width:100%;
+}
+.icon button{
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    padding:10px;
+    margin:auto 5px;
+}
+.file{
+    height: 20px;
+    padding: 0 2px;
+}
+.upload{
+    height: 20px;
+}
+.container2{
+    background: hsl(228, 56%, 26%);
+    color:white;
+    text-align: center;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto 35px;
+    height: 150px;
+}
+.storage{
+    padding: 10px;
+}
+.progressbar{
+    width: 80%;
+    margin:auto;
+    border-radius: 10px;
+    height: 20px;
+    background:black;
+}
+.bar{
+    background-image:linear-gradient(120deg,hsl(6, 100%, 80%) ,hsl(335, 100%, 65%));
+    height: 100%;
+    width: 80%;
+    border-radius: 10px;   
+    animation: load 3s normal forwards;
+}
+@keyframes load {
+    0% { width: 0; }
+    100% { width: 75%; }
+  }
+.circle{
+    height: 100%;
+    background:white;
+    width: 10%;
+    float:right;
+    border-radius: 50px;
+}
+.gb{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.box{
+    width: 50%;
+    height: 70px;
+    padding: 1px 5px;
+    border-radius: 5px;
+    background:white;
+    position: relative;
+    z-index:1;
+    left: 25%;
+    animation: fadeIn 5s;
+}
+@keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+.box p{
+    color: grey;
+}
+strong{
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+@media screen and (min-width: 525px) and (max-width: 800px){
+    .circle{
+        width: 20px;
+    }
+}
+@media screen and (max-width: 1019px){
+    .container2{
+        margin:auto 10%;
+    }
+    .box1{
+        display: none;
+    }
+    .circle{
+        width:20px;
+    }
+}
+@media screen and (min-width: 1020px){
+    body{
+        background-color: hsl(228, 56%, 26%);
+        background-image: url('./images/bg-desktop.png');
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
+    main{
+        display: flex;
+        width: 100%;
+        margin: 200px auto;
+    }
+    .container{
+        width:40%;
+        height: 200px;
+    }
+    .container img{
+        margin: 20px;
+    }
+    .icon img{
+        margin: auto;
+    }
+    .container2{
+        margin:150px auto;
+        width: 50%;
+        height: 150px;
+    }
+    .infostorage{
+        text-align: left;
+        margin: 0 10%;
+    }
+    .box1{
+        position: absolute;
+        left: 65%;
+        width: 20%;
+        top: 300px;
+    }
+    .box2 {
+        display: none;
+    }
+.box::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    border-width: 20px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+.circle{
+    width: 20px;
+}
+}
